@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Артём Кравченко — Видеомонтаж & Моушн-дизайн</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor" id="cursor"></div>
+
+  <!-- Particles -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="logo">
+      КРАВЧЕНКО
+      <span>motion & video</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hero">Главная</a></li>
+      <li><a href="#about">Обо мне</a></li>
+      <li><a href="#portfolio">Работы</a></li>
+      <li><a href="#skills">Навыки</a></li>
+      <li><a href="#contact">Контакт</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section with Parallax -->
+  <section class="parallax-section" id="hero">
+    <div class="parallax-bg" data-speed="0.4"></div>
+    <div class="parallax-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-subtitle">Видеомонтаж & Моушн-дизайн</p>
+      <h1 class="hero-title">
+        <span class="glitch-wrap"><span class="glitch-text">Артём</span></span><br>
+        <span class="outline-text">Кравченко</span>
+      </h1>
+      <p class="hero-desc">Превращаю идеи в динамичные визуальные истории. Видеомонтаж, моушн-графика и визуальные эффекты</p>
+      <div class="hero-tools">
+        <span class="hero-tool">Premiere Pro</span>
+        <span class="hero-tool">After Effects</span>
+        <span class="hero-tool">DaVinci Resolve</span>
+        <span class="hero-tool">Photoshop</span>
+        <span class="hero-tool">Illustrator</span>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Marquee Strip -->
+  <div class="reel-strip">
+    <div class="reel-strip-inner">
+      <span>Видеомонтаж</span>
+      <span>Моушн-дизайн</span>
+      <span>Цветокоррекция</span>
+      <span>VFX</span>
+      <span>Анимация</span>
+      <span>Графический дизайн</span>
+      <span>Видеомонтаж</span>
+      <span>Моушн-дизайн</span>
+      <span>Цветокоррекция</span>
+      <span>VFX</span>
+      <span>Анимация</span>
+      <span>Графический дизайн</span>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="about-container">
+      <div class="about-image-wrap reveal">
+        <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=600&q=80" alt="Workspace">
+        <div class="about-image-border"></div>
+        <div class="about-image-tag">23 года / Павлодар</div>
+      </div>
+      <div class="reveal">
+        <p class="section-label">Обо мне</p>
+        <h2 class="section-title">Кравченко<br>Артём Николаевич</h2>
+        <p class="about-text">
+          Мне 23 года, и уже 5 лет я занимаюсь видеомонтажом и моушн-дизайном. 
+          Работаю с коммерческими проектами, рекламными роликами, музыкальными клипами 
+          и контентом для социальных сетей. Владею профессиональными инструментами Adobe 
+          и DaVinci Resolve. Каждый проект для меня — это возможность рассказать историю 
+          через движение, ритм и визуальные образы.
+        </p>
+        <div class="stats">
+          <div>
+            <span class="stat-number">5+</span>
+            <span class="stat-label">Лет опыта</span>
+          </div>
+          <div>
+            <span class="stat-number">100+</span>
+            <span class="stat-label">Проектов</span>
+          </div>
+          <div>
+            <span class="stat-number">40+</span>
+            <span class="stat-label">Клиентов</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Works Parallax Divider -->
+  <section class="parallax-section" id="works-parallax">
+    <div class="parallax-bg" data-speed="0.3"></div>
+    <div class="parallax-overlay"></div>
+    <div class="works-parallax-content">
+      <p class="section-label">Портфолио</p>
+      <h2 class="section-title">Избранные<br>проекты</h2>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <div class="portfolio-grid">
+      <div class="portfolio-item reveal">
+        <span class="portfolio-item-number">01</span>
+        <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&q=80" alt="Project 1">
+        <div class="portfolio-item-overlay">
+          <h3 class="portfolio-item-title">Рекламный ролик</h3>
+          <p class="portfolio-item-cat">Монтаж / Цветокоррекция / VFX</p>
+        </div>
+      </div>
+      <div class="portfolio-item reveal">
+        <span class="portfolio-item-number">02</span>
+        <img src="https://images.unsplash.com/photo-1535016120720-40c646be5580?w=800&q=80" alt="Project 2">
+        <div class="portfolio-item-overlay">
+          <h3 class="portfolio-item-title">Музыкальный клип</h3>
+          <p class="portfolio-item-cat">Монтаж / Моушн-графика</p>
+        </div>
+      </div>
+      <div class="portfolio-item reveal">
+        <span class="portfolio-item-number">03</span>
+        <img src="https://images.unsplash.com/photo-1774249421923-d0c5a3555d53?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=harrison-lin-YEkx0nE4YmI-unsplash.jpg&w=1920" alt="Project 3">
+        <div class="portfolio-item-overlay">
+          <h3 class="portfolio-item-title">Корпоративное видео</h3>
+          <p class="portfolio-item-cat">Моушн-дизайн / Анимация</p>
+        </div>
+      </div>
+      <div class="portfolio-item reveal">
+        <span class="portfolio-item-number">04</span>
+        <img src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?w=800&q=80" alt="Project 4">
+        <div class="portfolio-item-overlay">
+          <h3 class="portfolio-item-title">Контент для соцсетей</h3>
+          <p class="portfolio-item-cat">Reels / Stories / Анимация</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Parallax Divider -->
+  <section class="parallax-section" id="skills-parallax">
+    <div class="parallax-bg" data-speed="0.35"></div>
+    <div class="parallax-overlay"></div>
+    <div>
+      <p class="section-label">Инструменты</p>
+      <h2 class="section-title">Мой<br>арсенал</h2>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="skills-container">
+      <div class="skill-row reveal" data-skill="95">
+        <div>
+          <span class="skill-name">Premiere Pro</span>
+          <span class="skill-tag">Монтаж</span>
+        </div>
+        <div class="skill-bar-wrap"><div class="skill-bar"></div></div>
+      </div>
+      <div class="skill-row reveal" data-skill="93">
+        <div>
+          <span class="skill-name">After Effects</span>
+          <span class="skill-tag">Моушн / VFX</span>
+        </div>
+        <div class="skill-bar-wrap"><div class="skill-bar"></div></div>
+      </div>
+      <div class="skill-row reveal" data-skill="88">
+        <div>
+          <span class="skill-name">DaVinci Resolve</span>
+          <span class="skill-tag">Цветокоррекция</span>
+        </div>
+        <div class="skill-bar-wrap"><div class="skill-bar"></div></div>
+      </div>
+      <div class="skill-row reveal" data-skill="85">
+        <div>
+          <span class="skill-name">Photoshop</span>
+          <span class="skill-tag">Графика / Ретушь</span>
+        </div>
+        <div class="skill-bar-wrap"><div class="skill-bar"></div></div>
+      </div>
+      <div class="skill-row reveal" data-skill="80">
+        <div>
+          <span class="skill-name">Illustrator</span>
+          <span class="skill-tag">Вектор / Дизайн</span>
+        </div>
+        <div class="skill-bar-wrap"><div class="skill-bar"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience">
+    <div class="experience-container">
+      <div class="experience-header">
+        <p class="section-label reveal">Путь</p>
+        <h2 class="section-title reveal">Опыт & Развитие</h2>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-year">2021 — н.в.</div>
+        <div class="timeline-content">
+          <h3>Фриланс — видеомонтаж & моушн</h3>
+          <p>Работа с коммерческими заказчиками, создание рекламных роликов, моушн-графики для брендов, монтаж контента для YouTube и социальных сетей.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-year">2020 — 2021</div>
+        <div class="timeline-content">
+          <h3>Видеопродакшн-студия</h3>
+          <p>Монтаж корпоративных фильмов, имиджевых роликов, работа с цветокоррекцией в DaVinci Resolve. Создание анимированных титров и инфографики.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-year">2019 — 2020</div>
+        <div class="timeline-content">
+          <h3>Начало пути</h3>
+          <p>Первые проекты: монтаж видео для блогеров и малого бизнеса. Освоение Adobe Premiere Pro и After Effects. Изучение основ моушн-дизайна и композитинга.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Parallax Divider -->
+  <section class="parallax-section" id="contact-parallax">
+    <div class="parallax-bg" data-speed="0.3"></div>
+    <div class="parallax-overlay"></div>
+    <div>
+      <p class="section-label">Связаться</p>
+      <h2 class="section-title">Давайте создадим<br>что-то крутое</h2>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="contact-container">
+      <p class="section-label reveal">Контакт</p>
+      <h2 class="contact-title reveal">Напишите мне</h2>
+      <p class="contact-desc reveal">Нужен видеомонтаж, моушн-графика или рекламный ролик? Давайте обсудим ваш проект. Я всегда открыт к интересным задачам и сотрудничеству.</p>
+      <form class="contact-form reveal" onsubmit="event.preventDefault(); alert('Спасибо! Сообщение отправлено. Свяжусь с вами в ближайшее время.');">
+        <div class="form-row">
+          <input type="text" placeholder="Ваше имя" required>
+          <input type="email" placeholder="Email" required>
+        </div>
+        <input type="text" placeholder="Тип проекта (ролик, моушн, клип...)">
+        <textarea placeholder="Расскажите о вашем проекте..." required></textarea>
+        <button type="submit" class="submit-btn">Отправить</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-name">Артём Кравченко</div>
+    <div class="footer-role">Видеомонтаж & Моушн-дизайн</div>
+    <div class="social-links">
+      <a href="#">YouTube</a>
+      <a href="#">Behance</a>
+      <a href="#">Telegram</a>
+      <a href="#">Instagram</a>
+      <a href="#">VK</a>
+    </div>
+    <p class="copyright">&copy; 2025 Кравченко Артём Николаевич. Все права защищены.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
