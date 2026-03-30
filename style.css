@@ -34,7 +34,6 @@
     nav.scrolled {
       background: rgba(10, 10, 10, 0.95);
       padding: 14px 60px;
-      -webkit-backdrop-filter: blur(20px);
       backdrop-filter: blur(20px);
       border-bottom: 1px solid rgba(255,255,255,0.05);
     }
@@ -320,7 +319,6 @@
       letter-spacing: 3px;
       text-transform: uppercase;
       color: rgba(255,255,255,0.6);
-      -webkit-backdrop-filter: blur(10px);
       backdrop-filter: blur(10px);
     }
 
@@ -377,6 +375,14 @@
       position: relative;
       z-index: 2;
       text-align: center;
+      width: 100%;
+    }
+
+    .skills-parallax-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      width: 100%;
     }
 
     .works-parallax-content .section-title {
@@ -795,16 +801,11 @@
     }
 
     .works-parallax-content .section-label,
-    .works-parallax-content .section-title {
+    .works-parallax-content .section-title,
+    .skills-parallax-content .section-label,
+    .skills-parallax-content .section-title {
       position: relative;
       z-index: 2;
-    }
-
-    #skills-parallax > div,
-    #contact-parallax > div {
-      position: relative;
-      z-index: 2;
-      text-align: center;
     }
 
     #skills-parallax .section-title {
