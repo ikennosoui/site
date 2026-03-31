@@ -254,13 +254,13 @@
       <p class="section-label reveal">Контакт</p>
       <h2 class="contact-title reveal">Напишите мне</h2>
       <p class="contact-desc reveal">Нужен видеомонтаж, моушн-графика или рекламный ролик? Давайте обсудим ваш проект. Я всегда открыт к интересным задачам и сотрудничеству.</p>
-      <form class="contact-form reveal" onsubmit="event.preventDefault(); alert('Спасибо! Сообщение отправлено. Свяжусь с вами в ближайшее время.');">
+      <form class="contact-form" action="https://formspree.io/f/xwvwblwk" method="POST">
         <div class="form-row">
-          <input type="text" placeholder="Ваше имя" required>
-          <input type="email" placeholder="Email" required>
+          <input type="text" name="name" placeholder="Ваше имя" required>
+          <input type="email" name="email" placeholder="Email" required>
         </div>
-        <input type="text" placeholder="Тип проекта (ролик, моушн, клип...)">
-        <textarea placeholder="Расскажите о вашем проекте..." required></textarea>
+        <input type="text" name="project" placeholder="Тип проекта" required>
+        <textarea name="message" placeholder="Расскажите о вашем проекте..." required></textarea>
         <button type="submit" class="submit-btn">Отправить</button>
       </form>
     </div>
