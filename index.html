@@ -3,10 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Портфолио видеомонтажёра и моушн-дизайнера">
   <title>Артём Кравченко — Видеомонтаж & Моушн-дизайн</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <div id="preloader">
+  <div class="loader-content">
+    <span id="loader-percent">0%</span>
+  </div>
+  </div>
 
   <!-- Custom Cursor -->
   <div class="custom-cursor" id="cursor"></div>
@@ -31,7 +38,7 @@
 
   <!-- Hero Section with Parallax -->
   <section class="parallax-section" id="hero">
-    <div class="parallax-bg" data-speed="0.4"></div>
+    <div class="parallax-bg" data-speed="1.2"></div>
     <div class="parallax-overlay"></div>
     <div class="hero-content">
       <p class="hero-subtitle">Видеомонтаж & Моушн-дизайн</p>
@@ -76,7 +83,7 @@
   <section id="about">
     <div class="about-container">
       <div class="about-image-wrap reveal">
-        <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=600&q=80" alt="Workspace">
+        <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=600&q=80" alt="Workspace" loading="lazy">
         <div class="about-image-border"></div>
         <div class="about-image-tag">23 года / Павлодар</div>
       </div>
@@ -110,7 +117,7 @@
 
   <!-- Works Parallax Divider -->
   <section class="parallax-section" id="works-parallax">
-    <div class="parallax-bg" data-speed="0.3"></div>
+    <div class="parallax-bg" data-speed="1.0"></div>
     <div class="parallax-overlay"></div>
     <div class="works-parallax-content">
       <p class="section-label">Портфолио</p>
@@ -123,7 +130,7 @@
     <div class="portfolio-grid">
       <div class="portfolio-item reveal">
         <span class="portfolio-item-number">01</span>
-        <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&q=80" alt="Project 1">
+        <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&q=80" alt="Project 1" loading="lazy">
         <div class="portfolio-item-overlay">
           <h3 class="portfolio-item-title">Рекламный ролик</h3>
           <p class="portfolio-item-cat">Монтаж / Цветокоррекция / VFX</p>
@@ -131,7 +138,7 @@
       </div>
       <div class="portfolio-item reveal">
         <span class="portfolio-item-number">02</span>
-        <img src="https://images.unsplash.com/photo-1535016120720-40c646be5580?w=800&q=80" alt="Project 2">
+        <img src="https://images.unsplash.com/photo-1535016120720-40c646be5580?w=800&q=80" alt="Project 2" loading="lazy">
         <div class="portfolio-item-overlay">
           <h3 class="portfolio-item-title">Музыкальный клип</h3>
           <p class="portfolio-item-cat">Монтаж / Моушн-графика</p>
@@ -139,7 +146,7 @@
       </div>
       <div class="portfolio-item reveal">
         <span class="portfolio-item-number">03</span>
-        <img src="https://images.unsplash.com/photo-1774249421923-d0c5a3555d53?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=harrison-lin-YEkx0nE4YmI-unsplash.jpg&w=1920" alt="Project 3">
+        <img src="https://images.unsplash.com/photo-1774249421923-d0c5a3555d53?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=harrison-lin-YEkx0nE4YmI-unsplash.jpg&w=1920" alt="Project 3" loading="lazy">
         <div class="portfolio-item-overlay">
           <h3 class="portfolio-item-title">Корпоративное видео</h3>
           <p class="portfolio-item-cat">Моушн-дизайн / Анимация</p>
@@ -147,7 +154,7 @@
       </div>
       <div class="portfolio-item reveal">
         <span class="portfolio-item-number">04</span>
-        <img src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?w=800&q=80" alt="Project 4">
+        <img src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?w=800&q=80" alt="Project 4" loading="lazy">
         <div class="portfolio-item-overlay">
           <h3 class="portfolio-item-title">Контент для соцсетей</h3>
           <p class="portfolio-item-cat">Reels / Stories / Анимация</p>
@@ -158,7 +165,7 @@
 
   <!-- Skills Parallax Divider -->
   <section class="parallax-section" id="skills-parallax">
-    <div class="parallax-bg" data-speed="0.35"></div>
+    <div class="parallax-bg" data-speed="0.8"></div>
     <div class="parallax-overlay"></div>
     <div class="skills-parallax-content">
       <p class="section-label">Инструменты</p>
@@ -240,9 +247,9 @@
 
   <!-- Contact Parallax Divider -->
   <section class="parallax-section" id="contact-parallax">
-    <div class="parallax-bg" data-speed="0.3"></div>
+    <div class="parallax-bg" data-speed="0.8"></div>
     <div class="parallax-overlay"></div>
-    <div>
+    <div class="skills-parallax-content">
       <p class="section-label">Связаться</p>
       <h2 class="section-title">Давайте создадим<br>что-то крутое</h2>
     </div>

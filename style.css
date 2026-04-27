@@ -34,6 +34,7 @@
     nav.scrolled {
       background: rgba(10, 10, 10, 0.95);
       padding: 14px 60px;
+      -webkit-backdrop-filter: blur(20px);
       backdrop-filter: blur(20px);
       border-bottom: 1px solid rgba(255,255,255,0.05);
     }
@@ -123,7 +124,7 @@
 
     /* ===== HERO ===== */
     #hero .parallax-bg {
-      background-image: url('https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1920&q=80');
+    background-image: url('./images/hero.jpg');
     }
 
     .hero-content {
@@ -319,6 +320,7 @@
       letter-spacing: 3px;
       text-transform: uppercase;
       color: rgba(255,255,255,0.6);
+      -webkit-backdrop-filter: blur(10px);
       backdrop-filter: blur(10px);
     }
 
@@ -368,7 +370,7 @@
 
     /* ===== WORKS PARALLAX ===== */
     #works-parallax .parallax-bg {
-      background-image: url('https://images.unsplash.com/photo-1536240478700-b869070f9279?w=1920&q=80');
+    background-image: url('./images/work.png');
     }
 
     .works-parallax-content {
@@ -474,14 +476,19 @@
 
     /* ===== SKILLS PARALLAX ===== */
     #skills-parallax .parallax-bg {
-      background-image: url('https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?w=1920&q=80');
+    background-image: url('./images/skills.png');
     }
 
     /* ===== SKILLS ===== */
     #skills {
-      background: #0a0a0a;
-      padding: 120px 60px;
+    background: #0a0a0a;
+    padding: 120px 60px;
     }
+
+    /*#skills {
+    position: relative;
+    z-index: 2;
+    }*/
 
     .skills-container {
       max-width: 900px;
@@ -586,7 +593,7 @@
 
     /* ===== CONTACT PARALLAX ===== */
     #contact-parallax .parallax-bg {
-      background-image: url('https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1920&q=80');
+    background-image: url('./images/contact.png');
     }
 
     /* ===== CONTACT ===== */
@@ -861,3 +868,25 @@
       .hero-tools { gap: 10px; }
       .hero-tool { font-size: 9px; padding: 6px 10px; }
     }
+
+    #preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0a0a0a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  }
+
+.loader-content {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  color: #fff;
+  letter-spacing: 4px;
+  }
+
+  

@@ -6,7 +6,7 @@
         const section = bg.parentElement;
         const rect = section.getBoundingClientRect();
         const speed = parseFloat(bg.dataset.speed) || 0.4;
-        const yPos = -(rect.top * speed);
+        const yPos = Math.max(-300, Math.min(300, -(rect.top * speed)));
         bg.style.transform = `translate3d(0, ${yPos}px, 0)`;
       });
     }
@@ -29,7 +29,7 @@
       reveals.forEach(el => {
         const top = el.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
-        if (top < windowHeight - 100) {
+        if (top < windowHeight - 50) {
           el.classList.add('active');
 
           // Animate skill bars
@@ -44,10 +44,12 @@
     // ===== CUSTOM CURSOR =====
     const cursor = document.getElementById('cursor');
 
+    if (window.innerWidth > 900) {
     document.addEventListener('mousemove', e => {
-      cursor.style.left = e.clientX + 'px';
-      cursor.style.top = e.clientY + 'px';
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
     });
+}
 
     document.querySelectorAll('a, button, .portfolio-item').forEach(el => {
       el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
@@ -56,8 +58,14 @@
 
     // ===== PARTICLES =====
     const canvas = document.getElementById('particles-canvas');
-    const ctx = canvas.getContext('2d');
-    let particles = [];
+
+let ctx = null;
+let particles = [];
+
+if (canvas) {
+  ctx = canvas.getContext('2d');
+
+  if (ctx) {
 
     function resizeCanvas() {
       canvas.width = window.innerWidth;
@@ -89,14 +97,14 @@
       draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
+        ctx.fillStyle = `rgba(255,255,255,${this.opacity})`;
         ctx.fill();
       }
     }
 
     function initParticles() {
       particles = [];
-      const count = Math.min(60, Math.floor(canvas.width * canvas.height / 20000));
+      const count = Math.min(40, Math.floor(canvas.width * canvas.height / 30000));
       for (let i = 0; i < count; i++) {
         particles.push(new Particle());
       }
@@ -110,30 +118,19 @@
         p.draw();
       });
 
-      // Draw lines between close particles
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-
-          if (dist < 150) {
-            ctx.beginPath();
-            ctx.strokeStyle = `rgba(255, 255, 255, ${0.05 * (1 - dist / 150)})`;
-            ctx.lineWidth = 0.5;
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.stroke();
-          }
-        }
-      }
-
       requestAnimationFrame(animateParticles);
     }
 
     resizeCanvas();
     initParticles();
     animateParticles();
+
+    window.addEventListener('resize', () => {
+      resizeCanvas();
+      initParticles();
+    });
+  }
+}
 
     window.addEventListener('resize', () => {
       resizeCanvas();
@@ -195,3 +192,38 @@
     updateParallax();
     handleNavbar();
     handleReveal();
+
+  const form = document.querySelector('.contact-form');
+
+  if (form) {
+  form.addEventListener('submit', () => {
+    alert('Сообщение отправлено!');
+  });
+  }
+
+  const percentEl = document.getElementById('loader-percent');
+  const preloader = document.getElementById('preloader');
+
+  let percent = 0;
+
+  const interval = setInterval(() => {
+  percent++;
+  if (percentEl) {
+    percentEl.textContent = percent + '%';
+  }
+
+  if (percent >= 100) {
+    clearInterval(interval);
+
+    setTimeout(() => {
+      if (preloader) {
+        preloader.style.opacity = '0';
+        preloader.style.transition = 'opacity 0.5s ease';
+
+        setTimeout(() => {
+          preloader.style.display = 'none';
+        }, 500);
+      }
+    }, 300);
+  }
+  }, 20);
