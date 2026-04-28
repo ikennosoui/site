@@ -203,13 +203,45 @@ if (canvas) {
     handleNavbar();
     handleReveal();
 
-  const form = document.querySelector('.contact-form');
+  function attachFormHandler(form) {
+  if (!form) return;
 
-  if (form) {
-  form.addEventListener('submit', () => {
-    alert('Сообщение отправлено!');
+  const originalForm = form.innerHTML;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: {
+        Accept: 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      form.innerHTML = `
+        <div class="success-message">
+          <h3>Спасибо!</h3>
+          <p>Ваш запрос отправлен. Я свяжусь с вами в ближайшее время.</p>
+          <button class="submit-btn resend-btn">Отправить ещё</button>
+        </div>
+      `;
+
+      const resendBtn = document.querySelector('.resend-btn');
+
+      resendBtn.addEventListener('click', () => {
+        form.innerHTML = originalForm;
+        attachFormHandler(form);
+      });
+    }
   });
-  }
+}
+    
+  const form = document.querySelector('.contact-form');
+  attachFormHandler(form);
 
   const percentEl = document.getElementById('loader-percent');
   const preloader = document.getElementById('preloader');

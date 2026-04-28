@@ -939,4 +939,22 @@
   letter-spacing: 4px;
   }
 
-  
+  .success-message {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.success-message h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.success-message p {
+  color: rgba(255,255,255,0.5);
+  line-height: 1.8;
+}
+
+.resend-btn {
+  margin-top: 30px;
+}
