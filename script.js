@@ -49,7 +49,17 @@
     cursor.style.left = e.clientX + 'px';
     cursor.style.top = e.clientY + 'px';
     });
-}
+    }
+
+    document.querySelectorAll('iframe').forEach(frame => {
+    frame.addEventListener('mouseenter', () => {
+    cursor.style.opacity = '0';
+    });
+
+    frame.addEventListener('mouseleave', () => {
+    cursor.style.opacity = '1';
+    });
+    });
 
     document.querySelectorAll('a, button, .portfolio-item').forEach(el => {
       el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
